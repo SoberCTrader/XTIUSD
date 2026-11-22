@@ -1,0 +1,657 @@
+{
+ "run": "2026-11-22 15:45:34 UTC",
+ "tool": "phase2_digest.py",
+ "python": "3.12.14",
+ "instrument": "XTIUSD",
+ "pip_size": 0.01,
+ "tick_stats": null,
+ "input_dir": "/workspace/XTIUSD",
+ "files": [
+  {
+   "name": "CCMonthCapture XTIUSD t100 20260501-20261121.csv",
+   "bytes": 4130448,
+   "md5": "1abcfb10126fcf3f1f6bf11c9ca8c1e4",
+   "rows": 83308,
+   "kind": "bar",
+   "first": "2026-05-01 00:01:06",
+   "last": "2026-11-20 21:54:37",
+   "tf": "t100",
+   "claimed": "2026 dates:2026-05-01,2026-11-21",
+   "actual": "2026-05-01 00:01:06 .. 2026-11-20 21:54:37",
+   "symbol": "XTIUSD?-consistent",
+   "symbol_note": "median 91.820 in [67.450..108.860]",
+   "header": null,
+   "swapped": false,
+   "delim": ",",
+   "bad_nf_count": 0,
+   "bad_nf": [],
+   "tick_size": 100
+  }
+ ],
+ "suspect_files": [],
+ "merged": {
+  "t100": {
+   "rows": 83308,
+   "first": "2026-05-01 00:01:06",
+   "last": "2026-11-20 21:54:37",
+   "active_days": 175,
+   "agree": 0,
+   "overlap": 0,
+   "conflicts": 0
+  }
+ },
+ "gap_thresholds_h": {
+  "t100": 6.0
+ },
+ "integrity": {
+  "t100": {
+   "duplicate_timestamps": 0,
+   "non_monotonic": [],
+   "non_monotonic_count": 0,
+   "ohlc_violations": [],
+   "ohlc_violation_count": 0,
+   "zero_range": 0,
+   "zero_volume": 0,
+   "wrong_field_count_rows": 0
+  }
+ },
+ "conflicts": [],
+ "gaps": [
+  {
+   "from": "2026-05-01 20:54:58",
+   "to": "2026-05-03 22:00:37",
+   "hours": 49.09,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-05-08 20:54:45",
+   "to": "2026-05-10 22:00:30",
+   "hours": 49.1,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-05-15 20:56:37",
+   "to": "2026-05-17 22:01:10",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-05-22 20:56:01",
+   "to": "2026-05-24 22:00:42",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-05-29 20:53:04",
+   "to": "2026-05-31 22:00:21",
+   "hours": 49.12,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-06-05 20:55:55",
+   "to": "2026-06-07 22:00:49",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-06-12 20:56:50",
+   "to": "2026-06-14 22:00:45",
+   "hours": 49.07,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-06-19 16:58:10",
+   "to": "2026-06-21 22:00:35",
+   "hours": 53.04,
+   "class": "weekend",
+   "note": "53.0h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-06-26 20:56:51",
+   "to": "2026-06-28 22:00:54",
+   "hours": 49.07,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-07-03 16:58:44",
+   "to": "2026-07-05 22:05:05",
+   "hours": 53.11,
+   "class": "weekend",
+   "note": "53.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-07-10 20:49:30",
+   "to": "2026-07-12 22:00:34",
+   "hours": 49.18,
+   "class": "weekend",
+   "note": "49.2h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-07-17 20:55:33",
+   "to": "2026-07-19 22:00:34",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-07-24 20:56:12",
+   "to": "2026-07-26 22:00:58",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-07-31 20:56:46",
+   "to": "2026-08-02 22:00:47",
+   "hours": 49.07,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-08-07 20:54:29",
+   "to": "2026-08-09 22:00:37",
+   "hours": 49.1,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-08-14 20:53:20",
+   "to": "2026-08-16 22:00:41",
+   "hours": 49.12,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-08-21 20:53:52",
+   "to": "2026-08-23 22:01:39",
+   "hours": 49.13,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-08-28 20:51:31",
+   "to": "2026-08-30 22:00:34",
+   "hours": 49.15,
+   "class": "weekend",
+   "note": "49.2h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-09-04 20:56:23",
+   "to": "2026-09-06 22:01:20",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-09-11 20:54:41",
+   "to": "2026-09-13 22:00:23",
+   "hours": 49.09,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-09-18 20:56:50",
+   "to": "2026-09-20 22:01:33",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-09-25 20:55:48",
+   "to": "2026-09-27 22:00:58",
+   "hours": 49.09,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-10-02 20:55:00",
+   "to": "2026-10-04 22:00:57",
+   "hours": 49.1,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-10-09 20:52:36",
+   "to": "2026-10-11 22:01:31",
+   "hours": 49.15,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-10-16 20:54:25",
+   "to": "2026-10-18 22:00:56",
+   "hours": 49.11,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-10-23 20:56:16",
+   "to": "2026-10-25 22:01:01",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-10-30 20:51:18",
+   "to": "2026-11-01 23:00:26",
+   "hours": 50.15,
+   "class": "weekend",
+   "note": "50.2h (DST-adjusted expected 50h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-11-06 21:55:47",
+   "to": "2026-11-08 23:00:40",
+   "hours": 49.08,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  },
+  {
+   "from": "2026-11-13 21:55:02",
+   "to": "2026-11-15 23:00:29",
+   "hours": 49.09,
+   "class": "weekend",
+   "note": "49.1h (DST-adjusted expected 49h)",
+   "tf": "t100"
+  }
+ ],
+ "gap_counts_per_tf": {
+  "t100": {
+   "weekend": 29
+  }
+ },
+ "hole_map": {
+  "t100": []
+ },
+ "weekend_seams": {
+  "t100": [
+   {
+    "from": "2026-05-29 20:53:04",
+    "to": "2026-05-31 22:00:21",
+    "prev_close": 90.19,
+    "reopen": 90.99,
+    "drift": 0.8,
+    "drift_pct": 0.887,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-10-30 20:51:18",
+    "to": "2026-11-01 23:00:26",
+    "prev_close": 103.513,
+    "reopen": 103.012,
+    "drift": -0.501,
+    "drift_pct": -0.484,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-10-09 20:52:36",
+    "to": "2026-10-11 22:01:31",
+    "prev_close": 92.66,
+    "reopen": 92.333,
+    "drift": -0.327,
+    "drift_pct": -0.3529,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-05-22 20:56:01",
+    "to": "2026-05-24 22:00:42",
+    "prev_close": 95.34,
+    "reopen": 95.44,
+    "drift": 0.1,
+    "drift_pct": 0.1049,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-07-17 20:55:33",
+    "to": "2026-07-19 22:00:34",
+    "prev_close": 84.08,
+    "reopen": 84.16,
+    "drift": 0.08,
+    "drift_pct": 0.0951,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-11-06 21:55:47",
+    "to": "2026-11-08 23:00:40",
+    "prev_close": 90.781,
+    "reopen": 90.706,
+    "drift": -0.075,
+    "drift_pct": -0.0826,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-06-19 16:58:10",
+    "to": "2026-06-21 22:00:35",
+    "prev_close": 78.43,
+    "reopen": 78.39,
+    "drift": -0.04,
+    "drift_pct": -0.051,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-08-28 20:51:31",
+    "to": "2026-08-30 22:00:34",
+    "prev_close": 85.44,
+    "reopen": 85.48,
+    "drift": 0.04,
+    "drift_pct": 0.0468,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-07-10 20:49:30",
+    "to": "2026-07-12 22:00:34",
+    "prev_close": 73.44,
+    "reopen": 73.41,
+    "drift": -0.03,
+    "drift_pct": -0.0408,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-11-13 21:55:02",
+    "to": "2026-11-15 23:00:29",
+    "prev_close": 88.515,
+    "reopen": 88.54,
+    "drift": 0.025,
+    "drift_pct": 0.0282,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-07-31 20:56:46",
+    "to": "2026-08-02 22:00:47",
+    "prev_close": 79.18,
+    "reopen": 79.2,
+    "drift": 0.02,
+    "drift_pct": 0.0253,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-08-14 20:53:20",
+    "to": "2026-08-16 22:00:41",
+    "prev_close": 82.7,
+    "reopen": 82.68,
+    "drift": -0.02,
+    "drift_pct": -0.0242,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-06-05 20:55:55",
+    "to": "2026-06-07 22:00:49",
+    "prev_close": 94.4,
+    "reopen": 94.38,
+    "drift": -0.02,
+    "drift_pct": -0.0212,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-09-18 20:56:50",
+    "to": "2026-09-20 22:01:33",
+    "prev_close": 100.94,
+    "reopen": 100.92,
+    "drift": -0.02,
+    "drift_pct": -0.0198,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-07-03 16:58:44",
+    "to": "2026-07-05 22:05:05",
+    "prev_close": 68.77,
+    "reopen": 68.78,
+    "drift": 0.01,
+    "drift_pct": 0.0145,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-06-26 20:56:51",
+    "to": "2026-06-28 22:00:54",
+    "prev_close": 70.75,
+    "reopen": 70.76,
+    "drift": 0.01,
+    "drift_pct": 0.0141,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-08-07 20:54:29",
+    "to": "2026-08-09 22:00:37",
+    "prev_close": 78.47,
+    "reopen": 78.46,
+    "drift": -0.01,
+    "drift_pct": -0.0127,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-06-12 20:56:50",
+    "to": "2026-06-14 22:00:45",
+    "prev_close": 81.43,
+    "reopen": 81.44,
+    "drift": 0.01,
+    "drift_pct": 0.0123,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-07-24 20:56:12",
+    "to": "2026-07-26 22:00:58",
+    "prev_close": 83.92,
+    "reopen": 83.91,
+    "drift": -0.01,
+    "drift_pct": -0.0119,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-08-21 20:53:52",
+    "to": "2026-08-23 22:01:39",
+    "prev_close": 87.02,
+    "reopen": 87.01,
+    "drift": -0.01,
+    "drift_pct": -0.0115,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-09-04 20:56:23",
+    "to": "2026-09-06 22:01:20",
+    "prev_close": 92.58,
+    "reopen": 92.57,
+    "drift": -0.01,
+    "drift_pct": -0.0108,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-10-02 20:55:00",
+    "to": "2026-10-04 22:00:57",
+    "prev_close": 93.3,
+    "reopen": 93.31,
+    "drift": 0.01,
+    "drift_pct": 0.0107,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-09-25 20:55:48",
+    "to": "2026-09-27 22:00:58",
+    "prev_close": 96.3,
+    "reopen": 96.29,
+    "drift": -0.01,
+    "drift_pct": -0.0104,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-05-08 20:54:45",
+    "to": "2026-05-10 22:00:30",
+    "prev_close": 98.65,
+    "reopen": 98.64,
+    "drift": -0.01,
+    "drift_pct": -0.0101,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-05-01 20:54:58",
+    "to": "2026-05-03 22:00:37",
+    "prev_close": 101.25,
+    "reopen": 101.24,
+    "drift": -0.01,
+    "drift_pct": -0.0099,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-09-11 20:54:41",
+    "to": "2026-09-13 22:00:23",
+    "prev_close": 101.96,
+    "reopen": 101.97,
+    "drift": 0.01,
+    "drift_pct": 0.0098,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-05-15 20:56:37",
+    "to": "2026-05-17 22:01:10",
+    "prev_close": 106.58,
+    "reopen": 106.59,
+    "drift": 0.01,
+    "drift_pct": 0.0094,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-10-16 20:54:25",
+    "to": "2026-10-18 22:00:56",
+    "prev_close": 99.674,
+    "reopen": 99.669,
+    "drift": -0.005,
+    "drift_pct": -0.005,
+    "tf": "t100"
+   },
+   {
+    "from": "2026-10-23 20:56:16",
+    "to": "2026-10-25 22:01:01",
+    "prev_close": 102.968,
+    "reopen": 102.963,
+    "drift": -0.005,
+    "drift_pct": -0.0049,
+    "tf": "t100"
+   }
+  ]
+ },
+ "anomaly_counts": {
+  "t100": 21
+ },
+ "cross_validation": [],
+ "phase_sweeps": {},
+ "reconciliations": {},
+ "digest": {
+  "t100": {
+   "years": [
+    {
+     "year": 2026,
+     "bars": 83308,
+     "active_days": 175,
+     "bars_per_day": 476.0,
+     "implied_ticks_per_day": 47605.0,
+     "median_min_per_bar": 1.8,
+     "avg_range_usd": 0.156,
+     "median_range_usd": 0.14,
+     "avg_range_pct": 0.17,
+     "median_range_pct": 0.15,
+     "cost_base_pct_of_avg_range": 12.82,
+     "cost_stress_pct_of_avg_range": 25.64
+    }
+   ],
+   "hourly": {
+    "profile": [
+     1886,
+     3705,
+     2407,
+     1829,
+     1268,
+     2373,
+     3392,
+     4041,
+     5287,
+     4245,
+     3958,
+     3999,
+     4806,
+     6518,
+     6389,
+     6358,
+     5132,
+     4498,
+     4412,
+     2844,
+     1979,
+     261,
+     972,
+     749
+    ],
+    "dead_hours": [],
+    "top_hours": [
+     13,
+     14,
+     15,
+     8,
+     16,
+     12
+    ],
+    "first_bar_hour_histogram": {
+     "0": 146,
+     "22": 26,
+     "23": 3
+    }
+   },
+   "febmar": null
+  }
+ },
+ "timezone": "UTC: session-open days (first bar after a >6h gap) start at 21:00-23:59 in 100% of cases; the 21/22 split flips with US DST (EDT/EST), matching the 21:00/22:00 UTC session boundary",
+ "timezone_timeframe": "t100",
+ "first_bar_hour_histogram": {
+  "22": 26,
+  "23": 3
+ },
+ "readiness": [
+  "t500 ABSENT: MA layer not runnable; t500 exports required.",
+  "t100 2026-05-01..2026-11-20: entry layer READY (83308 bars), but faithful-transpose cells NOT runnable - t500 MA layer absent, t500 exports required.",
+  "not present in this run: t300, t500, t750. t300 would be derivable from t100 (groups of 3, phase calibrated by sweep) if t100 present; t750 from t1 ticks (groups of 750) where tick coverage exists; neither is derivable from a coarser bar file alone.",
+  "No strategy backtest in this run - receipt and digest only; the strategy grid is a separate, later prompt."
+ ],
+ "thresholds": {
+  "delta_close_pct": 0.015,
+  "wick_pct": 0.025,
+  "gap_hours_floor": 6.0,
+  "gap_threshold_rule": "max(6h, 2.5x median inter-bar gap per timeframe)",
+  "spread_base": 0.02,
+  "spread_stress": 0.04,
+  "gold_tick_ref_per_day": 75000,
+  "session_day_open_utc": "22:00 EDT / 23:00 EST (DST-aware)"
+ }
+}
