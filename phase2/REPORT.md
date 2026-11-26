@@ -1,17 +1,19 @@
 # XTIUSD PHASE II - DATA RECEIPT & DIGEST
 
-Run: phase2_digest.py (python 3.12.14) at 2026-11-22 15:45:34 UTC. Input dir: `/workspace/XTIUSD`. Files found: 1.
+Run: phase2_digest.py (python 3.12.14) at 2026-11-26 09:11:32 UTC. Input dir: `/workspace/XTIUSD`. Files found: 2.
 
 ## MANIFEST
 
 | file | bytes | md5 | rows | first bar | last bar | tf | claimed | actual | symbol |
 |---|---|---|---|---|---|---|---|---|---|
+| CCMonthCapture XTIUSD t100 20220101-20221123.csv | 4890297 | 3a28062b32699cbed7d8a7a46e844738 | 99276 | 2022-01-02 23:04:03 | 2022-11-23 23:27:51 | t100 | 2022 | 2022-01-02 23:04:03 .. 2022-11-23 23:27:51 | XTIUSD? |
 | CCMonthCapture XTIUSD t100 20260501-20261121.csv | 4130448 | 1abcfb10126fcf3f1f6bf11c9ca8c1e4 | 83308 | 2026-05-01 00:01:06 | 2026-11-20 21:54:37 | t100 | 2026 | 2026-05-01 00:01:06 .. 2026-11-20 21:54:37 | XTIUSD? |
 
-- **t100**: 83308 rows (1 file), 2026-05-01 00:01:06 .. 2026-11-20 21:54:37; overlap 0/0 identical, 0 conflicts.
+- **t100**: 182584 rows (2 files), 2022-01-02 23:04:03 .. 2026-11-20 21:54:37; overlap 0/0 identical, 0 conflicts.
 
 ## FORMAT
 
+- CCMonthCapture XTIUSD t100 20220101-20221123.csv: 7 fields date,time,O,H,L,C,V confirmed
 - CCMonthCapture XTIUSD t100 20260501-20261121.csv: 7 fields date,time,O,H,L,C,V confirmed
 
 ## INTEGRITY
@@ -20,22 +22,23 @@ Run: phase2_digest.py (python 3.12.14) at 2026-11-22 15:45:34 UTC. Input dir: `/
 
 ## GAPS & SEAMS
 
-Timezone evidence (finest timeframe t100): UTC: session-open days (first bar after a >6h gap) start at 21:00-23:59 in 100% of cases; the 21/22 split flips with US DST (EDT/EST), matching the 21:00/22:00 UTC session boundary (histogram in receipt.json).
-- t100 (thr 6.0h): weekend 29, holiday 0, UNEXPLAINED 0.
+Timezone evidence (finest timeframe t100): UTC: session-open days (first bar after a >6h gap) start at 21:00-23:59 in 99% of cases; the 21/22 split flips with US DST (EDT/EST), matching the 21:00/22:00 UTC session boundary (histogram in receipt.json).
+- t100 (thr 6.0h): weekend 75, holiday 0, UNEXPLAINED 1.
+  - UNEXPLAINED 2022-11-23 23:27:51 -> 2026-05-01 00:01:06 (30096.5h)
 - holiday gaps by name: 
-- hole map **t100**: 0 zero-bar days: 
-- weekend seams: 29 total across timeframes, mean |drift| 0.08%, worst 5:
+- hole map **t100**: 1038 zero-bar days (incl. 174 Fridays - this timeframe has no Friday bars in part of its range): 2022-11-25, 2022-11-27..2022-12-02 ... (full map in receipt.json)
+- weekend seams: 74 total across timeframes, mean |drift| 0.05%, worst 5:
   - [t100] 2026-05-29 20:53:04 -> 2026-05-31 22:00:21 close 90.190 reopen 90.990 drift +0.800 (0.89%)
   - [t100] 2026-10-30 20:51:18 -> 2026-11-01 23:00:26 close 103.513 reopen 103.012 drift -0.501 (-0.48%)
   - [t100] 2026-10-09 20:52:36 -> 2026-10-11 22:01:31 close 92.660 reopen 92.333 drift -0.327 (-0.35%)
+  - [t100] 2022-03-04 21:54:58 -> 2022-03-06 23:03:29 close 129.860 reopen 129.620 drift -0.240 (-0.18%)
   - [t100] 2026-05-22 20:56:01 -> 2026-05-24 22:00:42 close 95.340 reopen 95.440 drift +0.100 (0.10%)
-  - [t100] 2026-07-17 20:55:33 -> 2026-07-19 22:00:34 close 84.080 reopen 84.160 drift +0.080 (0.10%)
 
 ## BAD TICKS
 
-- **t100**: 21 flagged bars (delta_close x21; wick x11). Full rows in anomalies.csv.
-  - CCMonthCapture XTIUSD t100 20260501-20261121.csv 2026-05-01 20:54:58 O=103.740 H=103.860 L=101.180 C=101.250 V=100 [delta_close 2.39%; wick 2.65%]
-  - CCMonthCapture XTIUSD t100 20260501-20261121.csv 2026-05-05 22:50:19 O=103.290 H=103.320 L=100.250 C=100.340 V=100 [delta_close 2.87%; wick 3.06%]
+- **t100**: 33 flagged bars (delta_close x32; wick x16). Full rows in anomalies.csv.
+  - CCMonthCapture XTIUSD t100 20220101-20221123.csv 2022-02-25 21:56:49 O=93.230 H=98.920 L=93.220 C=98.830 V=100 [delta_close 6.03%; wick 5.77%]
+  - CCMonthCapture XTIUSD t100 20220101-20221123.csv 2022-03-04 21:54:58 O=116.050 H=131.110 L=115.790 C=129.860 V=100 [delta_close 11.89%; wick 11.80%]
 
 ## CROSS-VALIDATION
 
@@ -50,16 +53,17 @@ Timezone evidence (finest timeframe t100): UTC: session-open days (first bar aft
 
 | year | bars | days | bars/day | ticks/day | min/bar | avg rng | med rng | avg rng % | base % | stress % |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2022 | 99276 | 279 | 355.8 | 35583.0 | 2.35 | 0.204 | 0.18 | 0.21 | 9.8 | 19.61 |
 | 2026 | 83308 | 175 | 476.0 | 47605.0 | 1.8 | 0.156 | 0.14 | 0.17 | 12.82 | 25.64 |
 
-**DEVIATION vs reference**: 2026: 476.0 bars/day vs ref ~750 (-37% off, BELOW ref - but 0 unexplained gaps / 0 hole days, so not missing data: real lower tick throughput)
-- hourly bar density (00-24, printed hours): 00:1886 01:3705 02:2407 03:1829 04:1268 05:2373 06:3392 07:4041 08:5287 09:4245 10:3958 11:3999 12:4806 13:6518 14:6389 15:6358 16:5132 17:4498 18:4412 19:2844 20:1979 21:261 22:972 23:749
-- dead hours: none; top hours: 13,14,15,08,16,12
+**DEVIATION vs reference**: 2022: 355.8 bars/day vs ref ~750 (-53% off, BELOW ref - but 1 unexplained gaps / 1038 hole days, so not missing data: real lower tick throughput); 2026: 476.0 bars/day vs ref ~750 (-37% off, BELOW ref - but 1 unexplained gaps / 1038 hole days, so not missing data: real lower tick throughput)
+- hourly bar density (00-24, printed hours): 00:4046 01:7953 02:5348 03:3978 04:2587 05:4843 06:6837 07:8483 08:10864 09:8722 10:8054 11:8271 12:10093 13:15357 14:15597 15:14721 16:11660 17:10273 18:10377 19:6417 20:3818 21:649 22:1791 23:1845
+- dead hours: none; top hours: 14,13,15,16,08,18
 
 ## PHASE II READINESS
 
 - t500 ABSENT: MA layer not runnable; t500 exports required.
-- t100 2026-05-01..2026-11-20: entry layer READY (83308 bars), but faithful-transpose cells NOT runnable - t500 MA layer absent, t500 exports required.
+- t100 2022-01-02..2026-11-20: entry layer READY (182584 bars), but faithful-transpose cells NOT runnable - t500 MA layer absent, t500 exports required.
 - not present in this run: t300, t500, t750. t300 would be derivable from t100 (groups of 3, phase calibrated by sweep) if t100 present; t750 from t1 ticks (groups of 750) where tick coverage exists; neither is derivable from a coarser bar file alone.
 - No strategy backtest in this run - receipt and digest only; the strategy grid is a separate, later prompt.
 
